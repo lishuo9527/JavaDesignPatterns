@@ -4,22 +4,22 @@ package me.lishuo.sample;
  * 懒汉模式改进,线程安全
  * Created by lis on 17/3/10.
  */
-public class Sigleton2 {
+public class Singleton2 {
 
-    private static volatile Sigleton2 instance = null;
+    private static volatile Singleton2 instance = null;
 
-    private Sigleton2() {
+    private Singleton2() {
     }
     /**
      * 双重检查锁定,线程安全兼顾效率
      *
      * @return
      */
-    public static Sigleton2 getInstance() {
+    public static Singleton2 getInstance() {
         if (instance == null) {
-            synchronized (Sigleton2.class) {
+            synchronized (Singleton2.class) {
                 if (instance == null) {
-                    instance = new Sigleton2();
+                    instance = new Singleton2();
                 }
 
             }

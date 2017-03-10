@@ -4,13 +4,13 @@ package me.lishuo.sample;
  * 通过枚举实现单例模式
  * Created by lis on 17/3/10.
  */
-public enum Sigleton5 {
+public enum Singleton5 {
     INSTANCE;
 
-    Sigleton5() {
+    Singleton5() {
     }
 
-    public Sigleton5 getInstance() {
+    public Singleton5 getInstance() {
         return INSTANCE;
     }
 

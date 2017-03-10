@@ -1,14 +1,20 @@
+
 ## 单例模式
+
 通常Java实现单例模式有很多种方式，大致可分为`懒汉模式`和`饿汉模式`，其主要区别是实例延迟加载的问题，当然单例模式往往也关注其他问题，如：线程安全等。下面试图来总结单例模式的这些注意点。
 
-# 饿汉模式
 
-```java 
+<!-- more -->
 
-public class Sigleton {
-    private static Sigleton instance = new Sigleton();
+### 饿汉模式
 
-    public static Sigleton getInstance() {
+```java
+
+public class Singleton {
+    private Singleton(){}
+    private static Singleton instance = new Singleton();
+
+    public static Singleton getInstance() {
         return instance;
     }
 }
@@ -18,57 +24,57 @@ public class Sigleton {
 
 ### 懒汉模式
 ```java
-public class Sigleton {
+public class Singleton {
+    private Singleton(){}
+    private static Singleton instance = null;
 
-    private static Sigleton instance = null;
-
-    public static Sigleton getInstance() {
+    public static Singleton getInstance() {
         if (instance == null) {
-            instance = new Sigleton();
+            instance = new Singleton();
         }
-        return new Sigleton();
+        return new Singleton();
     }
-} 
+}
 ```
 这种模式下在类加载时候并没有实例化对象，而是在调用`getInstance()`方法。之所以使用懒汉模式，是为了避免多早的实例化对象，从而浪费系统资源。
 **缺点：仅适用于单线程，线程不安全。**
 #### 改进1 - 引入`synchronized`
 ```java
-public class Sigleton {
+public class Singleton {
+    private Singleton(){}
+    private static Singleton instance = null;
 
-    private static Sigleton instance = null;
-
-    public static synchronized Sigleton getInstance() {
+    public static synchronized Singleton getInstance() {
         if (instance == null) {
-            instance = new Sigleton();
+            instance = new Singleton();
         }
-        return new Sigleton();
+        return new Singleton();
     }
-} 
+}
 ```
 之所以引入`synchronized`修饰`getInstance()`方法，是为了解决线程不安全的问题。利用多线程同步机制，让原先的线程不安全回归到线程安全。但引入`synchronized`会因为线程阻塞、切换会带一些不必要的开销，从而降低系统性能。
 #### 改进2 - 双重检查锁定
 ```java
-public class Sigleton {
+public class Singleton {
+    private Singleton(){}
+    private static volatile Singleton instance = null;
 
-    private static volatile Sigleton instance = null;
-
-    public static Sigleton getInstance() {
+    public static Singleton getInstance() {
         if (instance == null) {              // A
-            synchronized (Sigleton.class) {
+            synchronized (Singleton.class) {
                 if (instance == null) {      // B
-                    instance = new Sigleton(); // C
+                    instance = new Singleton(); // C
                 }
             }
         }
         return instance;
     }
-} 
+}
 ```
 对比改进1中，可以看到`synchronized`不再修饰一个方法，而是缩减到修改代码块，因为加锁同步的话，范围越小，性能影响最小。
 
 这里可以注意到修饰变量`instance`的关键字增加了`volatile`。这里`volatile`主要作用是提供内存屏障，禁止指令重排序。
-> 现有t1、t2两个线程同时访问`getInstance()`,假设t1、t2都执行到A处。由于有同步锁，只能有个1个线程获得锁，假如t1拥有该同步锁，t1执行到C处`instace = new Sigleton()`。将会做如下3步骤：
+> 现有t1、t2两个线程同时访问`getInstance()`,假设t1、t2都执行到A处。由于有同步锁，只能有个1个线程获得锁，假如t1拥有该同步锁，t1执行到C处`instace = new Singleton()`。将会做如下3步骤：
 > 1.分配内存空间
 2.初始化
 3.将instance指向分配内存空间
@@ -81,13 +87,13 @@ public class Sigleton {
 
 #### 改进3 - 静态内部类
 ```java
-public class Sigleton {
-
+public class Singleton {
+    private Singleton(){}
     private static class Holder {
-        public static Sigleton instance = new Sigleton();
+        public static Singleton instance = new Singleton();
     }
 
-    public static Sigleton getInstance() {
+    public static Singleton getInstance() {
         return Holder.instance; // 执行Holder的初始化工作
     }
 }
@@ -96,24 +102,27 @@ public class Sigleton {
 使用静态内部类也是懒汉模式的一种实现，当调用`ggetInstance()`才会触发加载静态内部类，从而初始化获取`instance`实例。利用静态内部类的加载机制来保证线程安全。
 
 
-#### 枚举方式
+### 枚举方式
 
 ```java
 
-public enum Sigleton {
+public enum Singleton {
     INSTANCE;
+    Singleton(){}
 
-    public Sigleton getInstance() {
+    public Singleton getInstance() {
         return INSTANCE;
     }
 
 }
 
 ```
-用枚举方式实现单例模式，是目前比较推荐的。枚举方式的好处是：1、线程安全；2.防止反射出现多个实例；3.防止反序列化出现多个实例
+用枚举方式实现单例模式，是目前比较推荐的。枚举方式的好处是：1、线程安全；2、防止反射出现多个实例；3、防止反序列化出现多个实例。
 
 
 
 **以上是关于java单例模式的一些总结，如有纰漏，还请指出。**
+
+
 
 

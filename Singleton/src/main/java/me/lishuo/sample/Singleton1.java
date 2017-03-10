@@ -4,11 +4,11 @@ package me.lishuo.sample;
  * 懒汉模式改进,线程安全
  * Created by lis on 17/3/10.
  */
-public class Sigleton1 {
+public class Singleton1 {
 
-    private static Sigleton1 instance = null;
+    private static Singleton1 instance = null;
 
-    private Sigleton1() {
+    private Singleton1() {
     }
 
     /**
@@ -16,11 +16,11 @@ public class Sigleton1 {
      *
      * @return
      */
-    public static synchronized Sigleton1 getInstance() {
+    public static synchronized Singleton1 getInstance() {
         if (instance == null) {
-            instance = new Sigleton1();
+            instance = new Singleton1();
         }
-        return new Sigleton1();
+        return new Singleton1();
     }
 
 

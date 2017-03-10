@@ -3,12 +3,12 @@ package me.lishuo.sample;
 /**
  * Created by lis on 17/3/10.
  */
-public class TestSigleton implements Runnable {
+public class TestSingleton implements Runnable {
 
     public void run() {
 
-        Sigleton2 sigleton2 = Sigleton2.getInstance();
-        System.out.println(sigleton2.hashCode());
+        Singleton2 singleton2 = Singleton2.getInstance();
+        System.out.println(singleton2.hashCode());
 
     }
 
@@ -16,7 +16,7 @@ public class TestSigleton implements Runnable {
 
         Thread[] threads = new Thread[10];
         for (int i = 0; i < 10; i++) {
-            threads[i] = new Thread(new TestSigleton());
+            threads[i] = new Thread(new TestSingleton());
             threads[i].start();
         }
 
