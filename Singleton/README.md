@@ -4,12 +4,9 @@
 通常Java实现单例模式有很多种方式，大致可分为`懒汉模式`和`饿汉模式`，其主要区别是实例延迟加载的问题，当然单例模式往往也关注其他问题，如：线程安全等。下面试图来总结单例模式的这些注意点。
 
 
-<!-- more -->
-
 ### 饿汉模式
 
 ```java
-
 public class Singleton {
     private Singleton(){}
     private static Singleton instance = new Singleton();
@@ -24,10 +21,10 @@ public class Singleton {
 
 ### 懒汉模式
 ```java
+
 public class Singleton {
     private Singleton(){}
     private static Singleton instance = null;
-
     public static Singleton getInstance() {
         if (instance == null) {
             instance = new Singleton();
@@ -109,11 +106,10 @@ public class Singleton {
 public enum Singleton {
     INSTANCE;
     Singleton(){}
-
+    
     public Singleton getInstance() {
         return INSTANCE;
     }
-
 }
 
 ```
@@ -121,7 +117,9 @@ public enum Singleton {
 
 
 
-**以上是关于java单例模式的一些总结，如有纰漏，还请指出。**
+**以上是关于Java单例模式的一些总结，如有纰漏，还请指出。**
+
+
 
 
 
