@@ -1,11 +1,15 @@
+
 ## 单例模式
+
 通常Java实现单例模式有很多种方式，大致可分为`懒汉模式`和`饿汉模式`，其主要区别是实例延迟加载的问题，当然单例模式往往也关注其他问题，如：线程安全等。下面试图来总结单例模式的这些注意点。
+
 
 ### 饿汉模式
 
 ```java 
 
 public class Sigleton {
+    private Sigleton(){}
     private static Sigleton instance = new Sigleton();
 
     public static Sigleton getInstance() {
@@ -19,7 +23,7 @@ public class Sigleton {
 ### 懒汉模式
 ```java
 public class Sigleton {
-
+    private Sigleton(){}
     private static Sigleton instance = null;
 
     public static Sigleton getInstance() {
@@ -35,7 +39,7 @@ public class Sigleton {
 #### 改进1 - 引入`synchronized`
 ```java
 public class Sigleton {
-
+    private Sigleton(){}
     private static Sigleton instance = null;
 
     public static synchronized Sigleton getInstance() {
@@ -50,7 +54,7 @@ public class Sigleton {
 #### 改进2 - 双重检查锁定
 ```java
 public class Sigleton {
-
+    private Sigleton(){}
     private static volatile Sigleton instance = null;
 
     public static Sigleton getInstance() {
@@ -82,7 +86,7 @@ public class Sigleton {
 #### 改进3 - 静态内部类
 ```java
 public class Sigleton {
-
+    private Sigleton(){}
     private static class Holder {
         public static Sigleton instance = new Sigleton();
     }
@@ -102,7 +106,8 @@ public class Sigleton {
 
 public enum Sigleton {
     INSTANCE;
-
+    Sigleton(){}
+    
     public Sigleton getInstance() {
         return INSTANCE;
     }
@@ -110,10 +115,12 @@ public enum Sigleton {
 }
 
 ```
-用枚举方式实现单例模式，是目前比较推荐的。枚举方式的好处是：1、线程安全；2.防止反射出现多个实例；3.防止反序列化出现多个实例
+用枚举方式实现单例模式，是目前比较推荐的。枚举方式的好处是：1、线程安全；2、防止反射出现多个实例；3、防止反序列化出现多个实例。
 
 
 
-**以上是关于java单例模式的一些总结，如有纰漏，还请指出。**
+**以上是关于Java单例模式的一些总结，如有纰漏，还请指出。**
+
+
 
 
