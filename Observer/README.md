@@ -1,6 +1,7 @@
 #### JAVA设计模式系列：
-[单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
-[观察者模式]()
+* [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
+* [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
+
 # 观察者模型
 
 ### 定义
@@ -118,6 +119,6 @@ public class TestObserver {
 
 
 #### JAVA设计模式系列：
-[单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
-[观察者模式]()
+* [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
+* [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
 
