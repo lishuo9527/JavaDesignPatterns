@@ -1,0 +1,17 @@
+package me.lishuo.interf.impl;
+
+import me.lishuo.interf.Observer;
+import me.lishuo.interf.Subject;
+
+/**
+ * Created by lis on 17/3/12.
+ */
+public class CountObserver implements Observer {
+
+    @Override
+    public void update(Subject subject) {
+        for (int i = 5; i > 0; i--){
+            System.out.println("CountObserver is working. i = " + i);
+        }
+    }
+}
