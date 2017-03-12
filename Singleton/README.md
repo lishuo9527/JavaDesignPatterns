@@ -1,6 +1,7 @@
 #### JAVA设计模式系列：
-[单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
-[观察者模式]()
+* [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
+* [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
+
 ## 单例模式
 
 通常Java实现单例模式有很多种方式，大致可分为`懒汉模式`和`饿汉模式`，其主要区别是实例延迟加载的问题，当然单例模式往往也关注其他问题，如：线程安全等。下面试图来总结单例模式的这些注意点。
@@ -123,7 +124,7 @@ public enum Singleton {
 
 
 #### JAVA设计模式系列：
-[单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
-[观察者模式]()
+* [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
+* [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
 
 
