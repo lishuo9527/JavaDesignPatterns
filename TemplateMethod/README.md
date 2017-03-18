@@ -1,7 +1,7 @@
 #### JAVA设计模式系列：
 * [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
 * [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
-* [模板方法模式]()
+* [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
 
 # 模板方法模式
 ### 定义
@@ -191,5 +191,5 @@ Adding Suger and Mike
 #### JAVA设计模式系列：
 * [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
 * [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
-* [模板方法模式]()
+* [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
 
