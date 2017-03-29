@@ -2,6 +2,7 @@
 * [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
 * [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
 * [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
+* [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
 
 ## 单例模式
 
@@ -128,5 +129,6 @@ public enum Singleton {
 * [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
 * [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
 * [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
+* [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
 
 

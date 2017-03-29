@@ -2,7 +2,7 @@
 * [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
 * [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
 * [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
-
+* [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
 # 模板方法模式
 ### 定义
 模板方法模式在一个方法中定义了算法的骨架，把其中的某些步骤延迟到子类的实现，是为我们提供了代码复用的一种重要的技巧。模板方法使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤。
@@ -192,4 +192,5 @@ Adding Suger and Mike
 * [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
 * [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
 * [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
+* [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
 
