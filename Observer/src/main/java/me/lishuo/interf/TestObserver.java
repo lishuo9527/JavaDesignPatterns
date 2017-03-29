@@ -1,5 +1,9 @@
 package me.lishuo.interf;
 
+import me.lishuo.interf.impl.CountObserver;
+import me.lishuo.interf.impl.CountObserver1;
+import me.lishuo.interf.impl.CountSubject;
+
 /**
  * Created by lis on 17/3/12.
  */
