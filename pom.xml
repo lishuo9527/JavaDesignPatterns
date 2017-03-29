@@ -12,6 +12,9 @@
         <module>Singleton</module>
         <module>Observer</module>
         <module>TemplateMethod</module>
+        <module>SimpleFactory</module>
+        <module>SimpleFactory</module>
+        <module>AbstractFactory</module>
     </modules>
 
 

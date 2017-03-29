@@ -1,4 +1,4 @@
-package me.lishuo.interf.impl;
+package me.lishuo.interf;
 
 import me.lishuo.interf.Observer;
 import me.lishuo.interf.Subject;

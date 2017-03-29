@@ -1,11 +1,5 @@
 package me.lishuo.interf;
 
-import me.lishuo.interf.impl.CountObserver;
-import me.lishuo.interf.impl.CountObserver1;
-import me.lishuo.interf.impl.CountSubject;
-
-import static com.sun.tools.doclint.Entity.sub;
-
 /**
  * Created by lis on 17/3/12.
  */
