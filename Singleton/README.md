@@ -4,6 +4,7 @@
 * [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
 * [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
 * [抽象工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/AbstractFactory)
+* [适配器模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Adapter)
 
 ## 单例模式
 
@@ -124,12 +125,4 @@ public enum Singleton {
 
 
 **以上是关于Java单例模式的一些总结，如有纰漏，还请指出。**
-
-
-#### JAVA设计模式系列：
-* [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
-* [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
-* [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
-* [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
-* [抽象工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/AbstractFactory)
 

@@ -15,6 +15,7 @@
         <module>SimpleFactory</module>
         <module>SimpleFactory</module>
         <module>AbstractFactory</module>
+        <module>Adapter</module>
     </modules>
 
 

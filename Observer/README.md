@@ -4,6 +4,7 @@
 * [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
 * [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
 * [抽象工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/AbstractFactory)
+* [适配器模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Adapter)
 
 # 观察者模型
 
@@ -119,12 +120,4 @@ public class TestObserver {
 #### 运行结果
 
 ![运行结果](https://ww3.sinaimg.cn/large/006tNc79gy1fdk2iu6uhnj30l9098gn5.jpg)
-
-
-#### JAVA设计模式系列：
-* [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
-* [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
-* [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
-* [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
-* [抽象工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/AbstractFactory)
 

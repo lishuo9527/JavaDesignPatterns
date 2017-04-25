@@ -4,6 +4,7 @@
 * [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
 * [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
 * [抽象工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/AbstractFactory)
+* [适配器模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Adapter)
 
 # 简单工厂模式
 
@@ -92,11 +93,4 @@ I am a orange.
 
 * 缺点：在增加新产品的时候，必须修改工厂类，违背了开放封闭原则。
 
-
-#### JAVA设计模式系列：
-* [单例模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Singleton)
-* [观察者模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/Observer)
-* [模板方法模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/TemplateMethod)
-* [简单工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/SimpleFactory)
-* [抽象工厂模式](https://github.com/lishuo9527/JavaDesignPatterns/tree/master/AbstractFactory)
 
